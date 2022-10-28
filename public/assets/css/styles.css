@@ -51,6 +51,10 @@ body {
   color: #757575;
 }
 
+li:hover{
+  background-color: rgb(157, 233, 208);
+  transition: .5s;
+}
 .list-container .card {
   height: calc(100vh - 70px);
   border-bottom: none;
