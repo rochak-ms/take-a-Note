@@ -65,6 +65,21 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
+// Bonus! Delete saved notes
+app.delete("/api/notes/:id", (req, res) => {
+  const id = req.params.id;
+  let note;
+
+  notes.map((element, index) => {
+    if (element.id === id) {
+      note = element;
+      notes.splice(index, 1);
+      return res.json(note);
+    }
+  });
+  console.log("Delete failed ");
+});
+
 // route to index.html
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
