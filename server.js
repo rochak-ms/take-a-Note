@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Sets the port of the environment variable.
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // Extends the express app with a new app.
 const app = express();
@@ -22,7 +22,7 @@ app.use(express.static("public"));
 const { notes } = require("./db/db.json");
 
 // Creates a new note.
-function createNewNote(body, noteArray) {
+function createNewNote(body, notesArray) {
   const note = body;
   notesArray.push(note);
   fs.writeFileSync(
@@ -72,7 +72,7 @@ app.get("/", (req, res) => {
 
 // route to notes.html
 app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/notes/html"));
+  res.sendFile(path.join(__dirname, "./public/notes/notes.html"));
 });
 
 // Start the API server.
