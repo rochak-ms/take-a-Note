@@ -9,9 +9,9 @@
   "author": "Rochak Shrestha",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "heroku": "^7.65.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rochak-ms/take-a-Note.git"

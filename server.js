@@ -72,7 +72,7 @@ app.get("/", (req, res) => {
 
 // route to notes.html
 app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/notes/notes.html"));
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
 
 // Start the API server.
