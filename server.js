@@ -15,6 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
+// middleware for public files
+app.use(express.static("public"));
+
 // Load a db. json file
 const { notes } = require("./db/db.json");
 
@@ -60,6 +63,16 @@ app.post("/api/notes", (req, res) => {
 
     res.json(note);
   }
+});
+
+// route to index.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
+// route to notes.html
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/notes/html"));
 });
 
 // Start the API server.
