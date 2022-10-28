@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+.navbar-brand{
+  font-size: 3rem;
+  margin: auto;
+}
+
 .save-note {
   display: none;
 }
@@ -14,6 +19,11 @@ body {
   margin-right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.icons i:hover{
+  color: #333!important;
+  transition: .5s;
 }
 
 .note-textarea,
@@ -31,7 +41,7 @@ body {
 }
 
 .note-title {
-  height: 50px;
+  height: auto;
   margin-top: 13px;
   font-size: 3rem;
 }
